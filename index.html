@@ -15,9 +15,12 @@
    <![endif]-->
 </head>
 <body ng-controller="MainCtrl">
-
-  <div class="container" ng-repeat="post in posts | orderBy: '-upvotes'">
-    <h1>{{post.title}} - {{post.upvotes}}</h1>
+  
+  <div class="container">
+    <button class="btn btn-primary" ng-click="addPost()">Post</button>
+    <div ng-repeat="post in posts | orderBy: '-upvotes'">
+      <h1>{{post.title}} - {{post.upvotes}}</h1>
+    </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>

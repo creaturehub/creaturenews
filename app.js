@@ -7,4 +7,7 @@ angular.module('creatureNews', [])
       {title: 'post 4', upvotes: 9},
       {title: 'post 5', upvotes: 4}
     ];
+    $scope.addPost = function() {
+      $scope.posts.push({title: 'post ' + Math.floor(Math.random() * 100), upvotes: 0});
+    };
   }]);
