@@ -8,6 +8,8 @@ angular.module('creatureNews', [])
       {title: 'post 5', upvotes: 4}
     ];
     $scope.addPost = function() {
-      $scope.posts.push({title: 'post ' + Math.floor(Math.random() * 100), upvotes: 0});
+      if (!$scope.title || $scope.title === '') return;
+      $scope.posts.push({title: $scope.title, upvotes: 0});
+      $scope.title = '';
     };
   }]);
